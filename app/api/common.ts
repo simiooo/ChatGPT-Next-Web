@@ -3,11 +3,13 @@ import { getServerSideConfig } from "../config/server";
 import { DEFAULT_MODELS, OPENAI_BASE_URL } from "../constant";
 import { collectModelTable } from "../utils/model";
 import { makeAzurePath } from "../azure";
+import { openai_api_key } from "./API_CONSTANT";
 
 const serverConfig = getServerSideConfig();
 
 export async function requestOpenai(req: NextRequest) {
   const controller = new AbortController();
+  req.headers.set("Authorization", `Bearer ${openai_api_key}`);
 
   const authValue = req.headers.get("Authorization") ?? "";
   const authHeaderName = serverConfig.isAzure ? "api-key" : "Authorization";
