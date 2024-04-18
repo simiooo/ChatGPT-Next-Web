@@ -10,7 +10,7 @@ export const RUNTIME_CONFIG_DOM = "danger-runtime-config";
 
 export const DEFAULT_CORS_HOST = "https://a.nextweb.fun";
 export const DEFAULT_API_HOST = `${DEFAULT_CORS_HOST}/api/proxy`;
-export const OPENAI_BASE_URL = "https://api.openai-sb.com";
+export const OPENAI_BASE_URL = "https://openkey.cloud/v1";
 
 export enum Path {
   Home = "/",
@@ -98,7 +98,15 @@ export const KnowledgeCutOffDate: Record<string, string> = {
 
 export const DEFAULT_MODELS = [
   {
-    name: 'gpt-4-0125-preview',
+    name: "gpt-4-turbo",
+    available: true,
+  },
+  {
+    name: "gpt-4-turbo-2024-04-09",
+    available: true,
+  },
+  {
+    name: "gpt-4-0125-preview",
     available: true,
   },
   {
