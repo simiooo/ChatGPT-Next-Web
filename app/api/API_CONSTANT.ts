@@ -1,5 +1,5 @@
 const gkas = "s";
-const lkdafg = "k";
-const gasd = "UjRswAGjlvhwES799c9b9d16D2C14324852217F516Bf5b14";
+const lkdafg = "b";
+const gasd = "9490f4181f93892463539be188ffdfd5e1f6ae30558e35f1";
 
 export const openai_api_key = `${gkas}${lkdafg}-${gasd}`;
